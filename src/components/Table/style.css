@@ -3,4 +3,32 @@
   padding-left: 5%;
   padding-right: 5%;
 }
+
+#Table .table-responsive-lg::-webkit-scrollbar {
+  height: 4px;
+}
+
+#Table .table-responsive-lg::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+#Table .table-responsive-lg::-webkit-scrollbar-thumb {
+  background-color: #8446ff;
+  border-radius: 10px;
+}
+
+#Table .table {
+  width: 100% !important;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  #Table {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #Table .table .th {
+    width: 300px !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */

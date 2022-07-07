@@ -50,7 +50,7 @@
 }
 
 #MobileNavbar ul li:nth-child(2) {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 #MobileNavbar ul li:nth-child(2) i {
@@ -77,7 +77,7 @@
 }
 
 #MobileNavbar ul li:nth-child(2) span {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   width: 100%;
   color: rgba(68, 8, 146, 0.4);

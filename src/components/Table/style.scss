@@ -3,5 +3,35 @@
     padding-left: 5%;
     padding-right: 5%;
 
+    .table-responsive-lg {
+        &::-webkit-scrollbar {
+            height: 4px;
+        }
 
+        &::-webkit-scrollbar-track {
+            background-color: #eee;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #8446ff;
+            border-radius: 10px;
+        }
+
+    }
+
+    .table {
+        width: 100% !important;
+        margin-bottom: 2px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #Table {
+        padding-left: 0;
+        padding-right: 0;
+        .table .th{
+            width: 300px !important;
+        }
+    }
 }
