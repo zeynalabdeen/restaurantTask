@@ -1,0 +1,60 @@
+#Card {
+  background: #fff;
+  width: 240px;
+  padding: 20px;
+  height: 100px;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Card .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background: #8446ff2f;
+}
+
+#Card .icon i {
+  color: #8446ff;
+  font-size: 30px;
+}
+
+#Card .content {
+  width: 60%;
+  padding-left: 16px;
+}
+
+#Card .content .value {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 22px;
+  color: #05010f;
+}
+
+#Card .content p {
+  font-size: 12px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #aaa;
+}
+/*# sourceMappingURL=style.css.map */

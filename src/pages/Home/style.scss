@@ -1,0 +1,19 @@
+#Home {
+    .company-name {
+        color: #8446ff;
+        font-weight: 700;
+
+    }
+
+    .company-information {
+        width: 100%;
+        max-width: 700px;
+
+        p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 500;
+        }
+    }
+}

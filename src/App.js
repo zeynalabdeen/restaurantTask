@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import routes from './routes';
+import useWindowSize from './hooks/useWindowSize';
+import MobileNavbar from './components/MobileNavbar';
+
 
 function App() {
+  const { width } = useWindowSize()
+
+
+
+
+  const RouteElements = routes.map(({ path, component }, i) => <Route path={path} element={component} key={i}></Route>)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='RestaurantApp' className={width < 768 && 'active'}>
+
+      {
+        width > 768 && <Navbar />
+      }
+      {
+        width <= 768 && <MobileNavbar />
+      }
+      <Routes>
+        {RouteElements}
+      </Routes>
+
+
+
+
     </div>
   );
 }
