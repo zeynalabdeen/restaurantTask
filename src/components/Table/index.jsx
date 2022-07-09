@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import './style.css'
+import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux'
+import { updateData } from '../../store/data'
 
 const Table = () => {
+    const data = useSelector(state => state.data.value)
+    const [totalPrice, setTotalPrice] = useState(0)
+    const dispatch = useDispatch()
+
+
+    useEffect(() => {
+        const countTotal = (items) => items.reduce((acc, curr) => acc + curr.price, 0);
+        setTotalPrice(countTotal(data))
+    }, [data])
+
+
     return (
-        <div id='Table' >
+        <div id='Table' className='w-100' >
             <div className='table-responsive-lg'>
-                <table class="table table-bordered">
-                    <thead class="thead-light">
+                <table className="table table-bordered">
+                    <thead className="thead-light">
                         <tr>
                             <th scope="col">S/S</th>
                             <th scope="col">Masa</th>
@@ -18,30 +32,27 @@ const Table = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>m6</td>
-                            <td>Zeynal</td>
-                            <td>Sonlanmayıb</td>
-                            <td>78.2 AZN</td>
-                            <td>22.05.2002 15:04:35</td>
-                            <td>
-                                <button className='btn btn-sm px-3 btn-success'>Bax</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>m6</td>
-                            <td>Zeynal</td>
-                            <td>Sonlanıb</td>
-                            <td>78.2 AZN</td>
-                            <td>22.05.2002 15:04:35</td>
-                            <td>
-                                <button className='btn btn-sm px-3 btn-success'>Bax</button>
-                            </td>
-                        </tr>
+                        {
+                            data.map((item, i) => (
+                                <tr key={i}>
+                                    <th scope="row">1</th>
+                                    <td>{item.table}</td>
+                                    <td>{item.person}</td>
+                                    <td>{item.status}</td>
+                                    <td>{item.price} AZN</td>
+                                    <td>{new Date().toDateString()}</td>
+                                    <td>
+                                        <button className='btn btn-sm px-3 btn-success'>Bax</button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
                     </tbody>
                 </table>
+            </div>
+            <div className="totalPrice mt-4 justify-content-end align-items-center d-flex w-100">
+                <h4 className='me-3 w-auto mb-0'>Cəmi Məbləğ:</h4>
+                <p className='w-auto mb-0'>{totalPrice} AZN</p>
             </div>
         </div>
     )

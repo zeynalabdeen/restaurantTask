@@ -22,6 +22,32 @@
     .table {
         width: 100% !important;
         margin-bottom: 2px;
+        *{
+            font-weight: 500;
+            color: rgb(87, 87, 87);
+        }
+        button{
+            background: #8446ff;
+            border-radius: 100px;
+            color: white;
+            width: 100%;
+            font-weight: 500;
+        }
+    }
+
+    .totalPrice {
+
+        h4,
+        p {
+            color: #270076;
+            font-weight: 600;
+        }
+        h4{
+            font-size: 22px;
+        }
+        p{
+            font-size: 18px;
+        }
     }
 
 }
@@ -30,7 +56,8 @@
     #Table {
         padding-left: 0;
         padding-right: 0;
-        .table .th{
+
+        .table .th {
             width: 300px !important;
         }
     }

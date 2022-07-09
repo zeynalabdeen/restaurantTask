@@ -22,6 +22,33 @@
   margin-bottom: 2px;
 }
 
+#Table .table * {
+  font-weight: 500;
+  color: #575757;
+}
+
+#Table .table button {
+  background: #8446ff;
+  border-radius: 100px;
+  color: white;
+  width: 100%;
+  font-weight: 500;
+}
+
+#Table .totalPrice h4,
+#Table .totalPrice p {
+  color: #270076;
+  font-weight: 600;
+}
+
+#Table .totalPrice h4 {
+  font-size: 22px;
+}
+
+#Table .totalPrice p {
+  font-size: 18px;
+}
+
 @media (max-width: 768px) {
   #Table {
     padding-left: 0;
