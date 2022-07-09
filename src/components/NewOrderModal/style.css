@@ -20,7 +20,8 @@
 }
 
 #NewOrderModal .modal-container {
-  width: 380px;
+  width: 100%;
+  max-width: 350px;
 }
 
 #NewOrderModal .modal-container select {

@@ -12,7 +12,8 @@
     animation: scale 0.4s ease forwards;
 
     .modal-container {
-        width: 380px;
+        width: 100%;
+        max-width: 350px;
 
         select {
             font-weight: 500;
